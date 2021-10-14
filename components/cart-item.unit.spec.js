@@ -85,7 +85,7 @@ describe('<CartItem/>', () => {
     expect(quantity.textContent).toBe('1');
   });
 
-  fit('should not go below zero in the quantity', async () => {
+  it('should not go below zero in the quantity', async () => {
     renderCartItem();
 
     const [buttonDecrease] = screen.getAllByRole('button');
