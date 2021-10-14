@@ -8,7 +8,7 @@ export default function CartItem({ product }) {
   };
 
   const handleDecrease = () => {
-    setQuantity((quantity) => quantity - 1);
+    setQuantity((quantity) => (quantity > 0 ? quantity - 1 : 0));
   };
   return (
     <div data-testid="cart-item" className="flex justify-between mt-6">
